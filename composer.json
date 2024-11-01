@@ -1,0 +1,11 @@
+{
+    "name": "vitorccs/simply-static-github-v2",
+    "description": "Enhance GitHub deployment of WordPress Simply Static plugin from hours to a few minutes",
+    "authors": [
+        {
+            "name": "Vitor Siqueira",
+            "email": "vitorccsiqueira@gmail.com"
+        }
+    ],
+    "require": {}
+}

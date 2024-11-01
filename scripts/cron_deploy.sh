@@ -3,11 +3,17 @@
 # set variables
 flag_status=""
 timestamp=$(date "+%Y%m%d_%H%M")
-
 settings_file="settings.txt"
 script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 settings_path="${script_dir}/../${settings_file}"
 
+# check if settings file exists
+if ! test -f "${settings_path}"; then
+    echo "ERROR: Settings file is missing (settings_path)"
+    exit 1
+fi
+
+# set variables from settings
 flag_file=$(sed -n 's/^flag_file=\(.*\)/\1/p' < "$settings_path")
 flag_pending=$(sed -n 's/^flag_pending=\(.*\)/\1/p' < "$settings_path")
 flag_running=$(sed -n 's/^flag_running=\(.*\)/\1/p' < "$settings_path")
@@ -48,6 +54,10 @@ then
 
     # deletes the flag file (ready for a new execution)
     rm "${flag_file_path}"
+
+    echo "SUCCESS: Published successfully"
+else
+    echo "WARNING: Nothing to do"
 fi
 
 

@@ -33,12 +33,17 @@ In short, the whole project consists of 4 files:
 ### Step 1
 Place this project folder inside your WordPress (e.g: `/var/www/html/MY_WORDPRESS/simply-static-github-v2`). 
 NOTE: the folder name must be "simply-static-github-v2"
+```bash
+cd /var/www/html/MY_WORDPRESS
+git clone https://github.com/vitorccs/simply-static-github-v2
+cd simply-static-github-v2
+````
 
 ### Step 2
 Make a copy of `settings.txt.dist` to `settings.txt` and change the variables:
 ```bash
 cp settings.txt.dist settings.txt
-vim settings.txt
+nano settings.txt
 ```
 
 ### Step 3
@@ -53,8 +58,8 @@ require_once(ABSPATH . 'simply-static-github-v2/includes/functions_include.php')
 ### Step 4
 Open bash scripts files and change variables per project settings:
 ```bash
-vim scripts/set_deploy.sh
-vim scripts/cron_deploy.sh
+nano scripts/set_deploy.sh
+nano scripts/cron_deploy.sh
 ```
 
 ### Step 5
