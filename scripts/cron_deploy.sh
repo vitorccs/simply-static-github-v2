@@ -40,6 +40,9 @@ then
     # give running status to flag file (prevents duplicated executions)
     echo "${flag_running}" > "${flag_file}"
 
+    # create .gitignore
+    echo "${flag_file}" > .gitignore
+
     # init the Git repository
     git init
     git config --global --add safe.directory "${path_release}"
