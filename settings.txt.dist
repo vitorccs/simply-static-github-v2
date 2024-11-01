@@ -1,0 +1,8 @@
+path_release=/var/www/html/my_release_folder
+git_token=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+git_username=myusername
+git_repo=myrepo
+
+flag_file=_deployment.txt
+flag_pending=pending
+flag_running=running
